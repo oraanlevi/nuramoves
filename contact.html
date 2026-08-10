@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — NuraMoves</title>
+<meta name="description" content="Get in touch with Nura Muhammad at NuraMoves. For general inquiries, brand collaborations, event opportunities, or questions about coaching.">
+<link rel="canonical" href="https://brandnu.body/contact.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://brandnu.body/contact.html">
+<meta property="og:title" content="Contact — NuraMoves">
+<meta property="og:description" content="Get in touch with Nura Muhammad at NuraMoves. For general inquiries, brand collaborations, event opportunities, or questions about coaching.">
+<meta property="og:image" content="https://brandnu.body/assets/images/19.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact — NuraMoves">
+<meta name="twitter:description" content="Get in touch with Nura Muhammad at NuraMoves.">
+<meta name="twitter:image" content="https://brandnu.body/assets/images/19.png">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <nav>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="coaching.html">Moves</a></li>
+      <li><a href="about.html">Nura</a></li>
+      <li><a href="results.html">Client Journey</a></li>
+    </ul>
+  </nav>
+  <a href="index.html" class="brand-mark">NuraMoves</a>
+  <a href="apply.html" class="nav-apply">Apply</a>
+  <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+</header>
+
+<main class="contact-page">
+  <div class="contact-page__inner">
+
+    <!-- Left: intro -->
+    <div class="contact-page__intro reveal">
+      <p class="tag">Get in touch</p>
+      <h1 class="ct-hero__headline">Let&rsquo;s start a<br>conversation.</h1>
+      <p class="ct-hero__sub">For general inquiries, brand collaborations, event opportunities, or any question not covered in the coaching application. This is the place to reach out.</p>
+      <p class="ct-redirect-note">Ready to apply for coaching? <a href="apply.html">Use the application form &rarr;</a></p>
+      <div class="ct-main__links">
+        <span class="ct-connect-label">Connect directly</span>
+        <div class="ct-icons">
+          <a href="https://www.instagram.com/nura0/" target="_blank" rel="noopener" class="ct-contact-link" aria-label="Follow NuraMoves on Instagram">
+            <svg class="ct-contact-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="mailto:hello@brandnu.body" class="ct-contact-link" aria-label="Email Nura at hello@brandnu.body">
+            <svg class="ct-contact-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+          </a>
+        </div>
+      </div>
+      <p class="ct-main__note">Every inquiry is reviewed personally by Nura.</p>
+    </div>
+
+    <!-- Right: form -->
+    <div class="contact-page__form-col reveal">
+
+      <form class="ct-form" id="contact-form" action="#" method="post" novalidate>
+
+        <div class="ct-field">
+          <label class="ct-label" for="inquiry-type">What brings you here?</label>
+          <div class="ct-select-wrap">
+            <select class="ct-select" id="inquiry-type" name="inquiry-type" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="coaching-question">Question about coaching</option>
+              <option value="brand-collaboration">Brand collaboration</option>
+              <option value="event-opportunity">Event or activation</option>
+              <option value="press-media">Press or media</option>
+              <option value="general">General inquiry</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="ct-field">
+          <label class="ct-label" for="name">Name</label>
+          <input class="ct-input" type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+        </div>
+
+        <div class="ct-field">
+          <label class="ct-label" for="email">Email</label>
+          <input class="ct-input" type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+        </div>
+
+        <div class="ct-field">
+          <label class="ct-label" for="message">Message</label>
+          <textarea class="ct-textarea" id="message" name="message" rows="5" placeholder="Tell me what&rsquo;s on your mind." required></textarea>
+        </div>
+
+        <div class="ct-form-error" id="contact-error" hidden role="alert">
+          Something went wrong. Please try again or email <a href="mailto:hello@brandnu.body">hello@brandnu.body</a> directly.
+        </div>
+
+        <button class="ct-submit" type="submit">Send message &rarr;</button>
+
+      </form>
+
+      <div class="ct-form-success" id="contact-success" hidden role="status">
+        <p class="ct-form-success__headline">Message received.</p>
+        <p class="ct-form-success__body">Thank you for reaching out. Nura reviews every message personally and will be in touch soon.</p>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <a href="index.html" class="brand-mark footer-brand">NuraMoves</a>
+      <p class="footer-tagline">Movement is medicine.</p>
+    </div>
+    <div class="footer-mid">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="coaching.html">Moves</a>
+        <a href="about.html">Nura</a>
+        <a href="results.html">Client Journey</a>
+        <a href="apply.html">Apply</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/nura0/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Follow NuraMoves on Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="mailto:hello@brandnu.body" class="footer-social-link" aria-label="Email NuraMoves">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year></span> NuraMoves. All rights reserved.</span>
+      <span>Los Angeles, CA</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

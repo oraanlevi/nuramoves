@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply for Coaching — NuraMoves</title>
+<meta name="description" content="Apply to work with Nura Muhammad through NuraMoves. Spots are limited. Every application is reviewed personally.">
+<link rel="canonical" href="https://brandnu.body/apply.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://brandnu.body/apply.html">
+<meta property="og:title" content="Apply for Coaching — NuraMoves">
+<meta property="og:description" content="Apply to work with Nura Muhammad through NuraMoves.">
+<meta property="og:image" content="https://brandnu.body/assets/images/2.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Apply for Coaching — NuraMoves">
+<meta name="twitter:description" content="Apply to work with Nura Muhammad through NuraMoves.">
+<meta name="twitter:image" content="https://brandnu.body/assets/images/2.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <nav>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="coaching.html">Moves</a></li>
+      <li><a href="about.html">Nura</a></li>
+      <li><a href="results.html">Client Journey</a></li>
+    </ul>
+  </nav>
+  <a href="index.html" class="brand-mark">NuraMoves</a>
+  <a href="apply.html" class="nav-apply is-active">Apply</a>
+  <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+</header>
+
+<!-- ================= APPLICATION ================= -->
+<section class="questionnaire">
+  <div class="qs-panel">
+
+    <!-- ── STATE 1: INTRO ── -->
+    <div class="qs-intro" id="qs-intro">
+      <p class="tag qs-intro__tag">Let&rsquo;s start with you</p>
+      <h1 class="qs-intro__headline">Coaching is personal.</h1>
+      <p class="qs-intro__body">Tell us a little about where you are, what you&rsquo;re working toward, and the support you&rsquo;re looking for.</p>
+      <button class="qs-start" id="qs-start-btn" type="button">Start &rarr;</button>
+      <a href="contact.html" class="qs-intro__contact">Have a question first? Contact Nura &rarr;</a>
+    </div>
+
+    <!-- ── STATE 2: QUESTIONS ── -->
+    <div class="qs-questions" id="qs-questions" hidden>
+
+      <div class="qs-questions__header">
+        <span class="qs-counter" id="qs-counter">01 / 08</span>
+      </div>
+
+      <form id="qs-form" novalidate>
+        <div class="qs-body">
+
+          <!-- Step 1 -->
+          <div class="questionnaire__step is-active" data-step="1">
+            <p class="tag questionnaire__tag">What brings you here</p>
+            <h2 class="questionnaire__question">What are you looking for support with?</h2>
+            <p class="questionnaire__hint">Select all that apply.</p>
+            <div class="questionnaire__chips" data-multi="true">
+              <button type="button" class="chip" data-value="Strength">Strength</button>
+              <button type="button" class="chip" data-value="Consistency">Consistency</button>
+              <button type="button" class="chip" data-value="Confidence">Confidence</button>
+              <button type="button" class="chip" data-value="Energy">Energy</button>
+              <button type="button" class="chip" data-value="Returning to movement">Returning to movement</button>
+              <button type="button" class="chip" data-value="Something else">Something else</button>
+            </div>
+            <p class="questionnaire__error" hidden>Please select at least one option.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="questionnaire__step" data-step="2">
+            <p class="tag questionnaire__tag">Your starting point</p>
+            <h2 class="questionnaire__question">Where are you in your movement journey right now?</h2>
+            <div class="questionnaire__chips" data-multi="false">
+              <button type="button" class="chip" data-value="Just getting started">Just getting started</button>
+              <button type="button" class="chip" data-value="Starting again">Starting again</button>
+              <button type="button" class="chip" data-value="Consistent but need direction">Consistent but need direction</button>
+              <button type="button" class="chip" data-value="Ready for my next level">Ready for my next level</button>
+            </div>
+            <p class="questionnaire__error" hidden>Please select an option.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="questionnaire__step" data-step="3">
+            <p class="tag questionnaire__tag">Your focus</p>
+            <h2 class="questionnaire__question">What would you most like to change right now?</h2>
+            <p class="questionnaire__hint">Be as specific or open as you&rsquo;d like.</p>
+            <textarea class="qs-textarea" name="change" rows="4" placeholder="Tell me what&rsquo;s on your mind..."></textarea>
+            <p class="questionnaire__error" hidden>Please share a few words.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="questionnaire__step" data-step="4">
+            <p class="tag questionnaire__tag">What gets in the way</p>
+            <h2 class="questionnaire__question">What tends to get in the way of staying consistent?</h2>
+            <p class="questionnaire__hint">Select all that apply.</p>
+            <div class="questionnaire__chips" data-multi="true">
+              <button type="button" class="chip" data-value="Time">Time</button>
+              <button type="button" class="chip" data-value="Motivation">Motivation</button>
+              <button type="button" class="chip" data-value="Structure">Structure</button>
+              <button type="button" class="chip" data-value="Accountability">Accountability</button>
+              <button type="button" class="chip" data-value="Knowing what to do">Knowing what to do</button>
+              <button type="button" class="chip" data-value="Other">Other</button>
+            </div>
+            <p class="questionnaire__error" hidden>Please select at least one option.</p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="questionnaire__step" data-step="5">
+            <p class="tag questionnaire__tag">How we&rsquo;d work together</p>
+            <h2 class="questionnaire__question">How would you prefer to work together?</h2>
+            <div class="questionnaire__chips" data-multi="false">
+              <button type="button" class="chip" data-value="In-person">In-person</button>
+              <button type="button" class="chip" data-value="Online">Online</button>
+              <button type="button" class="chip" data-value="Not sure yet">Not sure yet</button>
+            </div>
+            <p class="questionnaire__error" hidden>Please select an option.</p>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="questionnaire__step" data-step="6">
+            <p class="tag questionnaire__tag">Your why</p>
+            <h2 class="questionnaire__question">Why does starting now feel important to you?</h2>
+            <p class="questionnaire__hint">There&rsquo;s no wrong answer here.</p>
+            <textarea class="qs-textarea" name="why" rows="4" placeholder="Share whatever feels true..."></textarea>
+            <p class="questionnaire__error" hidden>Please share a few words.</p>
+          </div>
+
+          <!-- Step 7 -->
+          <div class="questionnaire__step" data-step="7">
+            <p class="tag questionnaire__tag">Where you are</p>
+            <h2 class="questionnaire__question">Where are you located?</h2>
+            <input class="qs-input" type="text" name="location" placeholder="e.g. Los Angeles, CA" autocomplete="off">
+            <p class="questionnaire__error" hidden>Please enter your location.</p>
+          </div>
+
+          <!-- Step 8 -->
+          <div class="questionnaire__step" data-step="8">
+            <p class="tag questionnaire__tag">Last step</p>
+            <h2 class="questionnaire__question">Tell us how to reach you.</h2>
+            <div class="qs-fields">
+              <div class="qs-field">
+                <label class="qs-label" for="qs-name">Name <span class="qs-required">*</span></label>
+                <input class="qs-input" type="text" id="qs-name" name="name" placeholder="Your full name" autocomplete="name" required>
+              </div>
+              <div class="qs-field">
+                <label class="qs-label" for="qs-email">Email <span class="qs-required">*</span></label>
+                <input class="qs-input" type="email" id="qs-email" name="email" placeholder="your@email.com" autocomplete="email" required>
+              </div>
+              <div class="qs-field">
+                <label class="qs-label" for="qs-phone">Phone</label>
+                <input class="qs-input" type="tel" id="qs-phone" name="phone" placeholder="Optional" autocomplete="tel">
+              </div>
+              <div class="qs-field">
+                <label class="qs-label" for="qs-instagram">Instagram</label>
+                <input class="qs-input" type="text" id="qs-instagram" name="instagram" placeholder="@handle, optional">
+              </div>
+            </div>
+            <p class="questionnaire__error" hidden>Please enter your name and email.</p>
+          </div>
+
+        </div><!-- /.qs-body -->
+
+        <div class="questionnaire__nav">
+          <button type="button" class="qs-back" id="qs-back">&larr; Back</button>
+          <button type="button" class="qs-next" id="qs-next">Next &rarr;</button>
+          <button type="submit" class="qs-submit" id="qs-submit" hidden>Submit Inquiry &rarr;</button>
+        </div>
+
+      </form>
+    </div><!-- /.qs-questions -->
+
+    <!-- ── STATE 3: CONFIRMATION — only after submit ── -->
+    <div class="questionnaire__confirmation" id="qs-confirmation" hidden>
+      <p class="tag questionnaire__tag">Application received</p>
+      <h2 class="questionnaire__confirmation-headline">Your next move<br>starts here.</h2>
+      <p class="questionnaire__confirmation-body">Thank you for sharing a little about yourself. Nura will be in touch if the coaching experience feels aligned.</p>
+    </div>
+
+  </div><!-- /.qs-panel -->
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <a href="index.html" class="brand-mark footer-brand">NuraMoves</a>
+      <p class="footer-tagline">Movement is medicine.</p>
+    </div>
+    <div class="footer-mid">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="coaching.html">Moves</a>
+        <a href="about.html">Nura</a>
+        <a href="results.html">Client Journey</a>
+        <a href="apply.html">Apply</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/nura0/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Follow NuraMoves on Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="mailto:hello@brandnu.body" class="footer-social-link" aria-label="Email NuraMoves">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year></span> NuraMoves. All rights reserved.</span>
+      <span>Los Angeles, CA</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+(function () {
+  var TOTAL   = 8;
+  var current = 1;
+
+  var intro     = document.getElementById('qs-intro');
+  var questions = document.getElementById('qs-questions');
+  var confirm   = document.getElementById('qs-confirmation');
+  var startBtn  = document.getElementById('qs-start-btn');
+  var backBtn   = document.getElementById('qs-back');
+  var nextBtn   = document.getElementById('qs-next');
+  var submitBtn = document.getElementById('qs-submit');
+  var counter   = document.getElementById('qs-counter');
+  var form      = document.getElementById('qs-form');
+  var steps     = document.querySelectorAll('.questionnaire__step');
+
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+
+  function showStep(n) {
+    steps.forEach(function(s) { s.classList.remove('is-active'); });
+    document.querySelector('[data-step="' + n + '"]').classList.add('is-active');
+    counter.textContent = pad(n) + ' / ' + pad(TOTAL);
+    backBtn.style.visibility = n === 1 ? 'hidden' : 'visible';
+    nextBtn.hidden   = n === TOTAL;
+    submitBtn.hidden = n !== TOTAL;
+    current = n;
+  }
+
+  function validateStep(n) {
+    var step     = document.querySelector('[data-step="' + n + '"]');
+    var errEl    = step.querySelector('.questionnaire__error');
+    var chips    = step.querySelector('.questionnaire__chips');
+    var textarea = step.querySelector('.qs-textarea');
+
+    if (chips && !chips.querySelector('.chip.is-selected')) {
+      errEl && (errEl.hidden = false); return false;
+    }
+    if (textarea && textarea.value.trim().length < 3) {
+      errEl && (errEl.hidden = false); return false;
+    }
+    if (n === 7) {
+      var loc = step.querySelector('.qs-input');
+      if (loc && !loc.value.trim()) { errEl && (errEl.hidden = false); return false; }
+    }
+    if (n === 8) {
+      var name  = document.getElementById('qs-name');
+      var email = document.getElementById('qs-email');
+      if (!name.value.trim() || !email.value.trim()) {
+        errEl && (errEl.hidden = false); return false;
+      }
+    }
+    errEl && (errEl.hidden = true);
+    return true;
+  }
+
+  // Chip clicks
+  document.querySelectorAll('.questionnaire__chips').forEach(function(group) {
+    var multi = group.dataset.multi === 'true';
+    group.querySelectorAll('.chip').forEach(function(chip) {
+      chip.addEventListener('click', function() {
+        if (!multi) group.querySelectorAll('.chip').forEach(function(c) { c.classList.remove('is-selected'); });
+        chip.classList.toggle('is-selected');
+        var err = group.closest('.questionnaire__step').querySelector('.questionnaire__error');
+        err && (err.hidden = true);
+      });
+    });
+  });
+
+  // Start button
+  startBtn.addEventListener('click', function() {
+    intro.hidden = true;
+    questions.hidden = false;
+    showStep(1);
+  });
+
+  backBtn.addEventListener('click', function() {
+    if (current > 1) showStep(current - 1);
+  });
+
+  nextBtn.addEventListener('click', function() {
+    if (validateStep(current) && current < TOTAL) showStep(current + 1);
+  });
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!validateStep(TOTAL)) return;
+    questions.hidden = true;
+    confirm.hidden   = false;
+  });
+
+})();
+</script>
+</body>
+</html>
