@@ -1807,6 +1807,62 @@ body:not(.page-home) .site-header {
   color: rgba(250,250,248,0.45);
 }
 
+/* ── CLIENT JOURNEY STAGES ──────────────────────────────────── */
+.cj-stages {
+  background: var(--ivory);
+  padding: clamp(5rem, 10vw, 8rem) var(--gutter);
+}
+
+.cj-stages__header {
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.cj-stages__headline {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink-black);
+  line-height: 1.05;
+  margin-top: 0.75rem;
+}
+
+.cj-stages__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(2rem, 4vw, 4rem);
+  border-top: 1px solid rgba(22,21,19,0.12);
+}
+
+.cj-stage {
+  padding-top: clamp(2rem, 3vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cj-stage__number {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--oxblood);
+}
+
+.cj-stage__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+  font-weight: 400;
+  color: var(--ink-black);
+  line-height: 1.15;
+}
+
+.cj-stage__desc {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(22,21,19,0.65);
+  max-width: 36ch;
+}
+
 .cj-outcomes {
   background: var(--cream);
   padding: clamp(4rem, 8vw, 6rem) var(--gutter);
