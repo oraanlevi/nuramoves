@@ -9,11 +9,11 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://brandnu.body/apply.html">
 <meta property="og:title" content="Apply for Coaching — NuraMoves">
-<meta property="og:description" content="Apply to work with Nura Muhammad through NuraMoves.">
+<meta property="og:description" content="Spots are limited and every application is reviewed personally by Nura. Tell us where you are, what you're working toward, and the support you're looking for.">
 <meta property="og:image" content="https://brandnu.body/assets/images/2.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Apply for Coaching — NuraMoves">
-<meta name="twitter:description" content="Apply to work with Nura Muhammad through NuraMoves.">
+<meta name="twitter:description" content="Spots are limited and every application is reviewed personally by Nura. Tell us where you are and what you're working toward.">
 <meta name="twitter:image" content="https://brandnu.body/assets/images/2.png">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -95,7 +95,8 @@
             <p class="tag questionnaire__tag">Your focus</p>
             <h2 class="questionnaire__question">What would you most like to change right now?</h2>
             <p class="questionnaire__hint">Be as specific or open as you&rsquo;d like.</p>
-            <textarea class="qs-textarea" name="change" rows="4" placeholder="Tell me what&rsquo;s on your mind..."></textarea>
+            <label for="qs-change" class="sr-only">What would you most like to change right now?</label>
+            <textarea class="qs-textarea" id="qs-change" name="change" rows="4" placeholder="Tell me what&rsquo;s on your mind..."></textarea>
             <p class="questionnaire__error" hidden>Please share a few words.</p>
           </div>
 
@@ -132,7 +133,8 @@
             <p class="tag questionnaire__tag">Your why</p>
             <h2 class="questionnaire__question">Why does starting now feel important to you?</h2>
             <p class="questionnaire__hint">There&rsquo;s no wrong answer here.</p>
-            <textarea class="qs-textarea" name="why" rows="4" placeholder="Share whatever feels true..."></textarea>
+            <label for="qs-why" class="sr-only">Why does starting now feel important to you?</label>
+            <textarea class="qs-textarea" id="qs-why" name="why" rows="4" placeholder="Share whatever feels true..."></textarea>
             <p class="questionnaire__error" hidden>Please share a few words.</p>
           </div>
 
@@ -140,7 +142,8 @@
           <div class="questionnaire__step" data-step="7">
             <p class="tag questionnaire__tag">Where you are</p>
             <h2 class="questionnaire__question">Where are you located?</h2>
-            <input class="qs-input" type="text" name="location" placeholder="e.g. Los Angeles, CA" autocomplete="off">
+            <label for="qs-location" class="sr-only">Where are you located?</label>
+            <input class="qs-input" type="text" id="qs-location" name="location" placeholder="e.g. Los Angeles, CA" autocomplete="off">
             <p class="questionnaire__error" hidden>Please enter your location.</p>
           </div>
 
