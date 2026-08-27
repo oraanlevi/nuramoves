@@ -66,7 +66,7 @@
             <p class="tag questionnaire__tag">What brings you here</p>
             <h2 class="questionnaire__question">What are you looking for support with?</h2>
             <p class="questionnaire__hint">Select all that apply.</p>
-            <div class="questionnaire__chips" data-multi="true">
+            <div class="questionnaire__chips" data-multi="true" data-field="support_with">
               <button type="button" class="chip" data-value="Strength">Strength</button>
               <button type="button" class="chip" data-value="Consistency">Consistency</button>
               <button type="button" class="chip" data-value="Confidence">Confidence</button>
@@ -81,7 +81,7 @@
           <div class="questionnaire__step" data-step="2">
             <p class="tag questionnaire__tag">Your starting point</p>
             <h2 class="questionnaire__question">Where are you in your movement journey right now?</h2>
-            <div class="questionnaire__chips" data-multi="false">
+            <div class="questionnaire__chips" data-multi="false" data-field="movement_journey">
               <button type="button" class="chip" data-value="Just getting started">Just getting started</button>
               <button type="button" class="chip" data-value="Starting again">Starting again</button>
               <button type="button" class="chip" data-value="Consistent but need direction">Consistent but need direction</button>
@@ -105,7 +105,7 @@
             <p class="tag questionnaire__tag">What gets in the way</p>
             <h2 class="questionnaire__question">What tends to get in the way of staying consistent?</h2>
             <p class="questionnaire__hint">Select all that apply.</p>
-            <div class="questionnaire__chips" data-multi="true">
+            <div class="questionnaire__chips" data-multi="true" data-field="obstacles">
               <button type="button" class="chip" data-value="Time">Time</button>
               <button type="button" class="chip" data-value="Motivation">Motivation</button>
               <button type="button" class="chip" data-value="Structure">Structure</button>
@@ -120,7 +120,7 @@
           <div class="questionnaire__step" data-step="5">
             <p class="tag questionnaire__tag">How we&rsquo;d work together</p>
             <h2 class="questionnaire__question">How would you prefer to work together?</h2>
-            <div class="questionnaire__chips" data-multi="false">
+            <div class="questionnaire__chips" data-multi="false" data-field="preference">
               <button type="button" class="chip" data-value="In-person">In-person</button>
               <button type="button" class="chip" data-value="Online">Online</button>
               <button type="button" class="chip" data-value="Not sure yet">Not sure yet</button>
@@ -179,6 +179,7 @@
           <button type="button" class="qs-next" id="qs-next">Next &rarr;</button>
           <button type="submit" class="qs-submit" id="qs-submit" hidden>Submit Inquiry &rarr;</button>
         </div>
+        <p class="questionnaire__error" id="qs-submit-error" hidden style="margin-top:0.75rem;text-align:center;">Something went wrong. Please check your connection and try again.</p>
 
       </form>
     </div><!-- /.qs-questions -->
@@ -241,7 +242,9 @@
   var submitBtn = document.getElementById('qs-submit');
   var counter   = document.getElementById('qs-counter');
   var form      = document.getElementById('qs-form');
-  var steps     = document.querySelectorAll('.questionnaire__step');
+  var steps       = document.querySelectorAll('.questionnaire__step');
+  var submitErrEl = document.getElementById('qs-submit-error');
+  var submitting  = false;
 
   function pad(n) { return (n < 10 ? '0' : '') + n; }
 
@@ -359,10 +362,55 @@
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
+    if (submitting) return;
     if (!validateStep(TOTAL)) return;
-    try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
-    questions.hidden = true;
-    confirm.hidden   = false;
+
+    submitting = true;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting\u2026';
+    submitErrEl.hidden = true;
+
+    function chipValues(fieldName) {
+      var group = document.querySelector('.questionnaire__chips[data-field="' + fieldName + '"]');
+      var vals = [];
+      group.querySelectorAll('.chip.is-selected').forEach(function(c) { vals.push(c.dataset.value); });
+      return vals.join(', ');
+    }
+
+    var payload = {
+      support_with:    chipValues('support_with'),
+      movement_journey: chipValues('movement_journey'),
+      change:          document.getElementById('qs-change').value.trim(),
+      obstacles:       chipValues('obstacles'),
+      preference:      chipValues('preference'),
+      why:             document.getElementById('qs-why').value.trim(),
+      location:        document.getElementById('qs-location').value.trim(),
+      name:            document.getElementById('qs-name').value.trim(),
+      email:           document.getElementById('qs-email').value.trim(),
+      phone:           document.getElementById('qs-phone').value.trim(),
+      instagram:       document.getElementById('qs-instagram').value.trim()
+    };
+
+    fetch('https://formspree.io/f/xgawrdlz', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(function(res) {
+      if (res.ok) {
+        try { localStorage.removeItem(STORAGE_KEY); } catch(ex) {}
+        questions.hidden = true;
+        confirm.hidden   = false;
+      } else {
+        throw new Error('Server error ' + res.status);
+      }
+    })
+    .catch(function() {
+      submitting = false;
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit Inquiry \u2192';
+      submitErrEl.hidden = false;
+    });
   });
 
   // Restore on load
