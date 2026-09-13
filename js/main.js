@@ -136,15 +136,10 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const btn = form.querySelector('[type="submit"]');
       const success = form.nextElementSibling;
+      const errorEl = success ? success.nextElementSibling : null;
       const endpoint = form.action;
-      if (!endpoint || endpoint.endsWith('#')) {
-        if (success && success.classList.contains('waitlist-success')) {
-          form.hidden = true;
-          success.hidden = false;
-        }
-        return;
-      }
       if (btn) { btn.disabled = true; btn.textContent = 'Joining\u2026'; }
+      if (errorEl) errorEl.hidden = true;
       try {
         const res = await fetch(endpoint, {
           method: 'POST',
@@ -157,6 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else { throw new Error(); }
       } catch {
         if (btn) { btn.disabled = false; btn.textContent = 'Join Waitlist'; }
+        if (errorEl) errorEl.hidden = false;
       }
     });
   });
