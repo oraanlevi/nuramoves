@@ -165,19 +165,19 @@
         <h3 class="glass-card__name">Online Coaching</h3>
         <button class="glass-card__cta service-row__cta--toggle" type="button">Join Waitlist &rarr;</button>
       </div>
+      <div class="service-row__waitlist-area" hidden>
+        <form class="waitlist-form waitlist-form--dark" id="waitlist-form-home" action="https://formspree.io/f/xgawrdlz" method="post">
+          <input type="hidden" name="source" value="home-waitlist">
+          <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+          <button type="submit">Join waitlist</button>
+        </form>
+        <p class="waitlist-success" hidden>You&rsquo;re on the list. Nura will be in touch.</p>
+        <p class="waitlist-error" hidden>Something went wrong. Please try again.</p>
+      </div>
     </div>
 
   </div>
 
-  <div class="service-row__waitlist-area" hidden>
-    <form class="waitlist-form waitlist-form--dark" id="waitlist-form-home" action="https://formspree.io/f/xgawrdlz" method="post">
-      <input type="hidden" name="source" value="home-waitlist">
-      <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
-      <button type="submit">Join waitlist</button>
-    </form>
-    <p class="waitlist-success" hidden>You&rsquo;re on the list. Nura will be in touch.</p>
-    <p class="waitlist-error" hidden>Something went wrong. Please try again.</p>
-  </div>
 </section>
 
 <!-- ================= CLIENT JOURNEYS ================= -->
