@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!endpoint || endpoint === window.location.href || endpoint.endsWith('#')) {
         if (errorEl) {
           errorEl.hidden = false;
-          errorEl.innerHTML = 'Form endpoint not configured. Please email <a href="mailto:hello@brandnu.body">hello@brandnu.body</a> directly.';
+          errorEl.innerHTML = 'Form endpoint not configured. Please email <a href="mailto:nuramoves@gmail.com">nuramoves@gmail.com</a> directly.';
         }
         return;
       }
